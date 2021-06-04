@@ -49,3 +49,11 @@ variable "dlc_target_arn" {
   type = string
   default = null
 }
+
+variable "subnet_ids" {
+  description = "List of subnet ID's"
+}
+
+variable "security_group_ids" {
+  description = "List of security groups"
+}
