@@ -17,7 +17,7 @@ fi
 FILE=$source_code_path/requirements.txt
 if [ -f $FILE ]; then
   echo "requirements.txt file exists in source_code_path. Installing dependencies.."
-  pip install -q -r $FILE --upgrade
+  pip3 install -q -r $FILE --upgrade
 else
   echo "requirements.txt file does not exist. Skipping installation of dependencies."
 fi
