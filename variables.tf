@@ -52,8 +52,10 @@ variable "dlc_target_arn" {
 
 variable "subnet_ids" {
   description = "List of subnet ID's"
+  default = []
 }
 
 variable "security_group_ids" {
   description = "List of security groups"
+  default = []
 }
