@@ -50,14 +50,6 @@ resource "aws_lambda_function" "lambda" {
   runtime          = var.runtime
   timeout          = var.timeout
   memory_size      = var.memory_size
-
-  tags { 
-    variables = var.tags
-  }
-  
-  event {
-    variables = var.event
-  }
   
   vpc_config {
     subnet_ids         = var.subnet_ids
