@@ -44,6 +44,18 @@ variable "environment" {
   default     = {}
 }
 
+variable "event" {
+  description = "CloudWatch scheduler"
+  type        = map
+  default     = {}
+}
+
+variable "tags" {
+  description = "tags"
+  type        = map
+  default     = {}
+}
+
 variable "dlc_target_arn" {
   description = "Lambda function dead_letter_config target_arn"
   type = string
