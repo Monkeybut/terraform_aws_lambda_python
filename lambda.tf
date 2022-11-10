@@ -51,9 +51,13 @@ resource "aws_lambda_function" "lambda" {
   timeout          = var.timeout
   memory_size      = var.memory_size
 
-  tags = var.tags
+  tags { 
+    variables = var.tags
+  }
   
-  event = var.event
+  event {
+    variables = var.event
+  }
   
   vpc_config {
     subnet_ids         = var.subnet_ids
@@ -80,9 +84,13 @@ resource "aws_lambda_function" "lambda_nodlc" {
   timeout          = var.timeout
   memory_size      = var.memory_size
   
-  tags = var.tags
+  tags { 
+    variables = var.tags
+  }
   
-  event = var.event
+  event {
+    variables = var.event
+  }
   
   vpc_config {
     subnet_ids         = var.subnet_ids
