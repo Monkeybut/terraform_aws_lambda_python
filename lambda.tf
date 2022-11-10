@@ -76,14 +76,6 @@ resource "aws_lambda_function" "lambda_nodlc" {
   timeout          = var.timeout
   memory_size      = var.memory_size
   
-  tags { 
-    variables = var.tags
-  }
-  
-  event {
-    variables = var.event
-  }
-  
   vpc_config {
     subnet_ids         = var.subnet_ids
     security_group_ids = var.security_group_ids
