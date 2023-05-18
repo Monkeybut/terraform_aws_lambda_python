@@ -59,3 +59,9 @@ variable "security_group_ids" {
   description = "List of security groups"
   default = []
 }
+
+variable "Architecture" {
+  description = "Lambda function dead_letter_config target_arn"
+  type = list(string)
+  default = ["x86_64"]
+}
