@@ -61,7 +61,13 @@ variable "security_group_ids" {
 }
 
 variable "Architecture" {
-  description = "Lambda function dead_letter_config target_arn"
+  description = "Arm vs x86"
   type = list(string)
   default = ["x86_64"]
+}
+
+variable "layers" {
+  description = "Lambda Layers"
+  type = list(string)
+  default = []
 }
