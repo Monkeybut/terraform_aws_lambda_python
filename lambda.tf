@@ -51,6 +51,7 @@ resource "aws_lambda_function" "lambda" {
   timeout          = var.timeout
   memory_size      = var.memory_size
   architectures    = var.Architecture
+  layers           = var.layers
 
   vpc_config {
     subnet_ids         = var.subnet_ids
@@ -77,7 +78,8 @@ resource "aws_lambda_function" "lambda_nodlc" {
   timeout          = var.timeout
   memory_size      = var.memory_size
   architectures    = var.Architecture
-  
+  layers           = var.layers
+
   vpc_config {
     subnet_ids         = var.subnet_ids
     security_group_ids = var.security_group_ids
